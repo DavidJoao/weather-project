@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import CoverPhoto from './components/CoverPhoto';
+import Input from './components/Input';
+import WeatherCard from './components/WeatherCard';
+import { useState } from 'react'
+
+const myKey = 'd707853305204cf699a210307221407'
+
+// fetch(' https://api.weatherapi.com/v1/current.json?key=' + myKey +'&q=Nochistlan')
+// .then((res) => { return res.json()})
+// .then((data) => console.log(data))
+// .catch((err ) => console.log(err))
+
 
 function App() {
+
+  const [city, setCity ] = useState('')
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <div className='App'>
+        <CoverPhoto />
+        <Input city={city} />
+        <WeatherCard />
+      </div>
+
   );
 }
 
