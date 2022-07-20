@@ -15,15 +15,14 @@ const myKey = 'd707853305204cf699a210307221407'
 
 function App() {
 
-  const [city, setCity ] = useState('')
+
 
 
   return (
 
       <div className='App'>
         <CoverPhoto />
-        <Input city={city} />
-        <WeatherCard />
+        <Input />
       </div>
 
   );
