@@ -7,6 +7,7 @@ function TimeZoneCard( {name, region, country, localtime }){
     return(
     <div className='timezonecard'>
         <Badge className='badge' bg='dark'>Time Zone</Badge>
+        <Card.Text className='time-description'>This card provides the local date/time of the city submited</Card.Text>
         <Card className='time-card' style={{ width: '18rem' }}>
           <Card.Img variant="top" src="" />
           <Card.Body className='time-body'>

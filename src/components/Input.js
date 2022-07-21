@@ -38,8 +38,7 @@ function Input(){
         .then((res) => { return res.json()})
         .then((data) => {
             city = data;
-            
-            console.log(city)
+
 
             city = {
                 country: data.location.country,
@@ -51,7 +50,6 @@ function Input(){
                 feelslike: data.current.feelslike_f,
             }
 
-            console.log(city)
             setCity(city)
 
         })
@@ -65,7 +63,6 @@ function Input(){
 
             cityForecast = data;
 
-            console.log(data)
 
             cityForecast = {
 
@@ -78,7 +75,6 @@ function Input(){
 
             }
             
-            console.log(cityForecast)
             setCityForecast(cityForecast)
 
         })

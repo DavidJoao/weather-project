@@ -50,30 +50,6 @@
   border-radius: 10px;
 }
 
-.typewriter {
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 150px;
-  color: white;
-  font-size: 33px;
-  right:150px;
-  width: 700px;
-  display: flex;
-  overflow: hidden; 
-  border-right: .15em solid black;
-  white-space: nowrap; 
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
-}
-
 .mb-3{
   width: 500px;
   margin: 0 auto;
@@ -209,6 +185,10 @@
   box-shadow: 7px -2px 73px 0px rgba(0,0,0,0.94);
 }
 
+.time-description{
+  color: white;
+}
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -235,3 +215,60 @@
   margin-left: 20px;
   font-size: 100px;
 }
+
+@media (max-width: 480px) {
+.App{
+  width: 100vh;
+  height: auto;
+}
+.mb-3{
+  width: 50vh;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.navigation{
+  width: 60vh;
+  margin: 0 auto;
+  padding: 20px;
+}
+.blocks{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  height: 100vh;
+  margin-bottom: 110px;
+}
+.weatherr{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 790px) {
+  .App{
+    width: 100vh;
+    height: auto;
+  }
+  .mb-3{
+    width: 60vh;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .navigation{
+    width: 60vh;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .blocks{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 110px;
+  }
+  .weatherr{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+

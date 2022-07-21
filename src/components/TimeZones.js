@@ -25,7 +25,6 @@ function TimeZones(){
         .then((res) => { return res.json()})
         .then((data) => {
             time = data;
-            console.log(time)
 
             time = {
                 name: data.location.name,
@@ -34,7 +33,6 @@ function TimeZones(){
                 localtime: data.location.localtime,
             }
 
-            console.log(time);
             setTime(time);
 
         })
@@ -53,7 +51,7 @@ function TimeZones(){
             aria-describedby='inputGroup-sizing-default' />
             <Button onClick={handleSearch} variant="dark"> Search </Button>
         </InputGroup> 
-            <TimeZoneCard name={time.name} region={time.region} country={time.region} localtime={time.localtime} />
+            <TimeZoneCard name={time.name} region={time.region} country={time.country} localtime={time.localtime} />
         <br />
         </div>
     )
