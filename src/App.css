@@ -117,6 +117,9 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  box-shadow: 7px -2px 73px 0px rgba(0,0,0,0.94);
+  border-radius: 25px;
+  padding: 10px;
 }
 .weatherr{
   display: flex;
@@ -129,6 +132,7 @@
 
 .foredetail{
   font-size: 13px;
+  
 }
 
 .cover-card{
@@ -143,6 +147,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(97, 96, 96, 0.6);
   color: white;
+
 }
 
 .navigation{
@@ -163,9 +168,10 @@
 .timezonecard{
   border-radius: 10px;
   margin: 0 auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 7px -2px 73px 0px rgba(0,0,0,0.94);
   padding: 20px;
   width: 500px;
+  
 
 }
 
@@ -192,4 +198,40 @@
   background-color: rgb(97, 96, 96, 0.7);
   padding: 7px;
   border-radius: 10px;
+}
+
+.contact-card{
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 150px;
+  width: auto;
+  background-color: rgb(97, 96, 96, 0.5);
+  box-shadow: 7px -2px 73px 0px rgba(0,0,0,0.94);
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  border-radius: 10px;
+}
+
+.fa-github{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  font-size: 100px;
 }
