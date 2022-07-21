@@ -1,4 +1,4 @@
-import {Form} from 'react-bootstrap'
+import { Form }  from 'react-bootstrap'
 import { InputGroup } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { useState } from 'react'
@@ -6,12 +6,13 @@ import WeatherCard from './WeatherCard'
 import NextDay from './NextDay'
 import CoverPhoto from './CoverPhoto'
 
+
 function Input(){
 
     let [ city, setCity ] = useState('Los Angeles')
     let [ cityForecast, setCityForecast] = useState('Los Angeles')
 
-    const myKey = 'd707853305204cf699a210307221407'        
+    const MY_KEY = process.env.REACT_APP_WEATHER_API_KEY;       
 
     let cityName = '';
 
@@ -33,7 +34,7 @@ function Input(){
 
         // FETCH FOR GET CURRENT WEATHER 
 
-        fetch(' https://api.weatherapi.com/v1/current.json?key=' + myKey +'&q=' + city)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${MY_KEY}&q=${city}`)
         .then((res) => { return res.json()})
         .then((data) => {
             city = data;
@@ -58,7 +59,7 @@ function Input(){
 
         // STARTING NEW FETCH FOR FORECAST
         
-        fetch(`https://api.weatherapi.com/v1/forecast.json?key=d707853305204cf699a210307221407&q=${city}&days=1&aqi=no&alerts=no`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=${MY_KEY}&q=${city}&days=1&aqi=no&alerts=no`)
         .then((res) => { return res.json()} )
         .then((data) => {
 

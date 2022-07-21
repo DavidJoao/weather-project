@@ -1,11 +1,9 @@
 import { Card } from 'react-bootstrap'
 import { Badge } from 'react-bootstrap'
-import Input from './Input';
-import { useState } from 'react'
+
 
 function WeatherCard( { country, name, region, icon, text, tempf, feelslike} ) {
 
-  const [city, setCity ] = useState('') 
 
     return (
       <div className='weatherr'>

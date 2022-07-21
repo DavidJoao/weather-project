@@ -159,3 +159,37 @@
   color: white;
   background-color: rgb(0, 0, 0, 0.2);
 }
+
+.timezonecard{
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  width: 500px;
+
+}
+
+.time-card{
+  margin: 0 auto;
+  height: 400px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  background-color: rgb(97, 96, 96, 0.6);
+  margin-top: 100px;
+}
+
+.time-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.localtime-text{
+  font-size: 30px;
+  background-color: rgb(97, 96, 96, 0.7);
+  padding: 7px;
+  border-radius: 10px;
+}
