@@ -8,18 +8,30 @@ import NextDay from './NextDay'
 function Input(){
 
     let [ city, setCity ] = useState('Los Angeles')
+    let [ cityForecast, setCityForecast] = useState('Los Angeles')
 
     const myKey = 'd707853305204cf699a210307221407'        
 
     let cityName = '';
+
+
+    // FUNCTION TO DETECT CHANGE IN INPUT BOX
+     
     const handleChange = (e) => {
 
         city = e.target.value;
 
     }
     
+
+    //FUNCTION TO HANDLE SEARCH BUTTON, WILL FETCH THE INFORMATION THAT I NEED
+
     const handleSubmit = () => {
         
+
+
+        // FETCH FOR GET CURRENT WEATHER 
+
         fetch(' https://api.weatherapi.com/v1/current.json?key=' + myKey +'&q=' + city)
         .then((res) => { return res.json()})
         .then((data) => {
@@ -38,10 +50,37 @@ function Input(){
             }
 
             console.log(city)
-            
             setCity(city)
+
         })
         .catch((err ) => console.log(err))
+
+        // STARTING NEW FETCH FOR FORECAST
+        
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=d707853305204cf699a210307221407&q=${city}&days=1&aqi=no&alerts=no`)
+        .then((res) => { return res.json()} )
+        .then((data) => {
+
+            cityForecast = data;
+
+            console.log(data)
+
+            cityForecast = {
+
+                maxtemp: data.forecast.forecastday[0].day.maxtemp_f,
+                mintemp: data.forecast.forecastday[0].day.mintemp_f,
+                icon: data.forecast.forecastday[0].day.condition.icon,
+                text: data.forecast.forecastday[0].day.condition.text,
+                sunset: data.forecast.forecastday[0].astro.sunset,
+                sunrise: data.forecast.forecastday[0].astro.sunrise,
+
+            }
+            
+            console.log(cityForecast)
+            setCityForecast(cityForecast)
+
+        })
+        .catch((err) => { console.log(err) })
 
     }
     
@@ -60,7 +99,7 @@ function Input(){
         </InputGroup> 
         <div className='blocks'>
             <WeatherCard country={city.country} name={city.name} region={city.region } icon={city.icon} text={city.text} tempf={city.tempf} feelslike={city.feelslike}/> 
-            <NextDay />
+            <NextDay country={city.country} name={city.name} region={city.region} maxtemp={cityForecast.maxtemp} mintemp={cityForecast.mintemp} icon={cityForecast.icon} text={cityForecast.text} sunrise={cityForecast.sunrise} sunset={cityForecast.sunset} />
         </div>
         <br />
         </div>

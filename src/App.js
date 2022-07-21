@@ -12,11 +12,7 @@ const myKey = 'd707853305204cf699a210307221407'
 // .then((data) => console.log(data))
 // .catch((err ) => console.log(err))
 
-
 function App() {
-
-
-
 
   return (
 

@@ -2,8 +2,12 @@
 
 .App {
   text-align: center;
-  background-image: url('https://anotherimg-dazedgroup.netdna-ssl.com/2000/azure/another-prod/340/1/341836.jpg');
+  background-image: url('https://www.pcclean.io/wp-content/uploads/2020/4/JjUjya.jpg');
+  background-size: cover;
+  height: 100vh;
+
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -78,10 +82,11 @@
 
 .weather-card{
   margin: 0 auto;
-  height: 350px;
-  background-color: rgb(97, 96, 96, 0.3);
+  height: auto;
+  background-color: rgb(97, 96, 96, 0.6);
   color: white;
   float: left;
+  font-weight: 700;
 }
 
 .max{
@@ -106,7 +111,7 @@
 }
 
 .blocks{
-  border: 1px solid black;
+
   width: 650px;
   height: 450px;
   margin: 0 auto;
@@ -120,4 +125,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.foredetail{
+  font-size: 13px;
+}
+
+.cover-card{
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.card-content{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(97, 96, 96, 0.6);
+  color: white;
 }

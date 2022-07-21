@@ -1,9 +1,18 @@
+import { Card } from 'react-bootstrap'
+
 function CoverPhoto() {
     return(
-        <div>
-            <img className="cover" src="https://www.adventurebikerider.com/wp-content/uploads/2017/10/tumblr_o27c7fByaO1tchrkco1_500.gif" />
-            <h1 className="typewriter">Hey, what's the weather today?</h1>
-
+        <div className='cover-card'>
+            <Card className='card-content'>
+                <Card.Header as="h5">MyWeather Website</Card.Header>
+                <Card.Body>
+                    <Card.Title>How does this page work?</Card.Title>
+                    <Card.Text>
+                    With this simple interface, the user gets weather information about the city they input, on the left card the user will be informed about
+                    the current weather of that city, the card located in the right side will provide a forecast for the next day.
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         </div>
     )
 }
