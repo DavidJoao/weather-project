@@ -144,3 +144,18 @@
   background-color: rgb(97, 96, 96, 0.6);
   color: white;
 }
+
+.navigation{
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.links {
+  color: white;
+}
+
+.links:hover{
+  color: white;
+  background-color: rgb(0, 0, 0, 0.2);
+}

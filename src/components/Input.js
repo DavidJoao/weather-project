@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap'
 import { useState } from 'react'
 import WeatherCard from './WeatherCard'
 import NextDay from './NextDay'
+import CoverPhoto from './CoverPhoto'
 
 function Input(){
 
@@ -88,6 +89,7 @@ function Input(){
 
     return(
         <div >
+        <CoverPhoto />
         <InputGroup className='mb-3'>
             <InputGroup.Text id='inputGroup-sizing-default'> Enter a city </InputGroup.Text>
             <Form.Control

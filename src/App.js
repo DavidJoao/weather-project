@@ -3,6 +3,7 @@ import './App.css';
 import CoverPhoto from './components/CoverPhoto';
 import Input from './components/Input';
 import WeatherCard from './components/WeatherCard';
+import Navigation from './components/Navigation';
 import { useState } from 'react'
 
 const myKey = 'd707853305204cf699a210307221407'
@@ -17,8 +18,8 @@ function App() {
   return (
 
       <div className='App'>
-        <CoverPhoto />
-        <Input />
+        <Navigation />
+        <Input  />
       </div>
 
   );
