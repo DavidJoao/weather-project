@@ -13,8 +13,8 @@ function NextDay( { country, name, region, maxtemp, mintemp, icon, text, sunset,
             <Card.Subtitle>{ region }</Card.Subtitle><br />
             <Card.Img className='icon' src={ icon }></Card.Img>
             <Card.Text>{ text }</Card.Text>
-            <p className='foredetail'>Max expected: { maxtemp }</p>
-            <p className='foredetail'>Min expected: { mintemp } </p>
+            <p className='foredetail'>Max expected: { maxtemp }°F</p>
+            <p className='foredetail'>Min expected: { mintemp }°F </p>
             <p className='foredetail'>Sunrise: { sunrise } </p>
             <p className='foredetail'>Sunset: { sunset } </p>
             <span></span>
